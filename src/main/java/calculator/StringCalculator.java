@@ -16,8 +16,7 @@ class StringCalculator {
 	private int sum(String[] numbers) {
 		int sum=0;
 		for(String number : numbers) {
-			int intNumber = toInt(number);
-			sum += intNumber;
+			sum += toInt(number);
 		}
 		return sum;
 	}
