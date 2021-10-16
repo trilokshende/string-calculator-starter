@@ -27,8 +27,8 @@ class StringCalculator {
 				else
 					negativeString += ","+number;
 			}
-			else
-				sum += toInt(number);
+			if(toInt(number) < 1000)
+		    	sum += toInt(number);
 		}
 		if(!negativeString.equals("")){
 			throw new IllegalArgumentException("Negatives not allowed: " + negativeString);
