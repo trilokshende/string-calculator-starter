@@ -24,6 +24,10 @@ class StringCalculatorShould {
     
     @Test
     public void unknownAmountOfNumbers(){
-    	assertEquals(15, stringCalculator.add("1,2,3,4,5"));
+    	String str = "1,2,3,4,5,6,7";
+    	int sum = stringCalculator.add(str);
+    	assertEquals(sum,stringCalculator.add(str));
     }
+    
+    
 }
