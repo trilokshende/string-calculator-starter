@@ -24,9 +24,7 @@ class StringCalculatorShould {
     
     @Test
     public void unknownAmountOfNumbers(){
-    	String str = "1,2,3,4,5,6,7";
-    	int sum = stringCalculator.add(str);
-    	assertEquals(sum,stringCalculator.add(str));
+    	assertEquals(1+2+3+4+5+6+7,stringCalculator.add("1,2,3,4,5,6,7"));
     }
     
     
