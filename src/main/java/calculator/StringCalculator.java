@@ -7,6 +7,10 @@ class StringCalculator {
     		return 0;
     	else {
     		String delimiter = ",";
+    		if(inputString.matches("//(.*)\n(.*)")){
+				delimiter = Character.toString(inputString.charAt(2));
+				inputString = inputString.substring(4);
+			}
 			String[] numbers = splitNumbers(inputString, delimiter+"|\n");
 			return sum(numbers);
     	}

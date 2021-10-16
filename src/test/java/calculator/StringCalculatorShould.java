@@ -31,4 +31,9 @@ class StringCalculatorShould {
     public void testNewLine(){
     	assertEquals(6, stringCalculator.add("1\n2,3"));
     }
+    
+    @Test
+    public void testOtherDelimiter(){
+    	assertEquals(3, stringCalculator.add("//;\n1;2"));
+    }
 }
