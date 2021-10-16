@@ -19,8 +19,19 @@ class StringCalculator {
 
 	private int sum(String[] numbers) {
 		int sum=0;
+		String negativeString = "";
 		for(String number : numbers) {
-			sum += toInt(number);
+			if(toInt(number)<0) {
+				if(negativeString == "")
+					negativeString = number;
+				else
+					negativeString += ","+number;
+			}
+			else
+				sum += toInt(number);
+		}
+		if(!negativeString.equals("")){
+			throw new IllegalArgumentException("Negatives not allowed: " + negativeString);
 		}
 		return sum;
 	}
